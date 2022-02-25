@@ -1,0 +1,56 @@
+.site-title{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.form{
+  text-align: center;
+}
+
+.form__label{
+  font-weight: 700;
+  font-size: 26px;
+  margin-right: 20px;
+}
+
+.form__input{
+  width: 200px;
+  padding: 10px;
+  margin-right: 20px;
+}
+
+.form__btn{
+  padding: 5px 13px;
+}
+
+.list{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.list__item{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 30px 60px;
+}
+
+.list__text{
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+}
+
+.list__result{
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+}
+
+.list__img{
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
