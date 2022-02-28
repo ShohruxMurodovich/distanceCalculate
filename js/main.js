@@ -8,35 +8,63 @@ var elPlane = document.querySelector(".list__result--plane")
 
 
 
-elForm.addEventListener("submit", function(e){
-  e.preventDefault();
+
+elForm.addEventListener("submit", function(evt){
+  evt.preventDefault();
 
   var elValue = elInput.value;
   var person = 3.6;
   var bike = 20.1;
   var transport = 70;
   var airplane = 800;
+  var elReturn = document.querySelector(".return")
 
 
-  function people(){
-    return elValue / person;
+
+
+  if(elValue <= 0 || isNaN(elValue)){
+    elReturn.textContent="0 dan katta son kiriting , va raqam kiriting!"
+    elReturn.classList.add("return-error")
+    return
+  }else{
+    elReturn.textContent=""
+    elReturn.classList.remove('return-error')
   }
 
-  function bicycle(){
-    return elValue / bike;
+
+
+
+  function calculateTime_1(distance, speed) {
+    var hour = Math.floor(elValue / person);
+    var minute = Math.floor((elValue / person - hour) * 60);
+    var second = Math.floor(((elValue / person - hour) * 60 - minute) * 60);
+    return hour + ' soat ' + minute + ' minut ' + second + 'secund';
   }
 
-  function car(){
-    return elValue / transport;
+  function calculateTime_2(distance, speed) {
+    var hour = Math.floor(elValue / bike);
+    var minute = Math.floor((elValue / bike - hour) * 60);
+    var second = Math.floor(((elValue / bike - hour) * 60 - minute) * 60);
+    return hour + ' soat ' + minute + ' minut ' + second + 'secund';
   }
 
-  function plane(){
-    return elValue / airplane;
+  function calculateTime_3(distance, speed) {
+    var hour = Math.floor(elValue / transport);
+    var minute = Math.floor((elValue / transport - hour) * 60);
+    var second = Math.floor(((elValue / transport - hour) * 60 - minute) * 60);
+    return hour + ' soat ' + minute + ' minut ' + second + 'secund';
   }
 
-  elMan.textContent = Math.round(people());
-  elBicycle.textContent = Math.round(bicycle());
-  elCar.textContent = Math.round(car());
-  elPlane.textContent = Math.round(plane());
+  function calculateTime_4(distance, speed) {
+    var hour = Math.floor(elValue / airplane);
+    var minute = Math.floor((elValue / airplane - hour) * 60);
+    var second = Math.floor(((elValue / airplane - hour) * 60 - minute) * 60);
+    return hour + ' soat ' + minute + ' minut ' + second + 'secund';
+  }
+
+  elMan.textContent = calculateTime_1();
+  elBicycle.textContent = calculateTime_2();
+  elCar.textContent = calculateTime_3();
+  elPlane.textContent = calculateTime_4();
 
 })

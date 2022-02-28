@@ -32,6 +32,7 @@
 }
 
 .list__item{
+  width: 220px;
   border: 1px solid black;
   border-radius: 5px;
   padding: 30px 60px;
@@ -53,4 +54,17 @@
   width: 100px;
   display: block;
   margin: 0 auto;
+}
+
+
+.return-error{
+  display: block;
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: red;
+  color: #fff;
 }
